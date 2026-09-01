@@ -1,6 +1,4 @@
+IRIS flower classification problem  
 
-iris flower classification problem 
-cleaned data with no missing values or unproper values 
-The Iris flower dataset consists of three species: setosa, versicolor, and virginica. These species can be distinguished based on their measurements. Now, imagine that you have the measurements of Iris flowers categorized by their respective species. Your objective is to train a machine learning model that can learn from these measurements and accurately classify the Iris flowers into their respective species.
-
-we will use jupiyter notebook or google colab on this problem to built up the model , i have used D tree and SVM for this problem and i will provide a comparison on this problem of using the data measurements on this project 
+my objective was to train and test multiple ML model that can learn from the data measurements and classify the IRIS flower into their species 
+the data was already clean and has no missing values, the dataset consists of three species: setosa, versicolor, and virginica, and these species can be distinguished based on their own measurments , the problems is : you have measurements but the model is not informed with the species , solving : is to be able to make the model to use the measurements to recognize the species.

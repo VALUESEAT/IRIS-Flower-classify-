@@ -15,7 +15,7 @@ try:
 except ImportError:
     FrozenEstimator = None
 
-# 1. Load the Iris dataset
+# 1. Load the data
 iris_data = pd.read_csv('IRIS.csv')
 
 print("--- First 5 Rows ---")
@@ -36,7 +36,7 @@ print(iris_data.shape)
 print("\n--- Value Counts ---")
 print(iris_data['species'].value_counts())
 
-# 2. Data Visualizations
+# 2. Data Visualizations and plot setting 
 sns.set_theme()
 
 # Count plot
@@ -45,7 +45,7 @@ sns.countplot(x='species', data=iris_data)
 plt.title('Species Count')
 plt.show()
 
-# Bar plot for sepal length
+# plot for sepal length
 plt.figure()
 sns.barplot(x='sepal_length', data=iris_data)
 plt.title('Sepal Length Bar Plot')
@@ -57,7 +57,7 @@ sns.FacetGrid(iris_data, hue='species', height=5)\
    .add_legend()
 plt.show()
 
-# Scatter Plot: Sepal Width vs Petal Width
+#  Sepal Width vs Petal Width
 sns.FacetGrid(iris_data, hue='species', height=5)\
    .map(plt.scatter, 'sepal_width', 'petal_width')\
    .add_legend()
@@ -71,7 +71,7 @@ y = iris_data['species'].values
 print("\nFeature matrix (X) shape:", x.shape)
 print("Target vector (Y) shape:", y.shape)
 
-# 4. Label Encoding
+# 4. Label Encoding for converting data into numerical values 
 label_encoder = LabelEncoder()
 y = label_encoder.fit_transform(y)
 
@@ -141,7 +141,7 @@ for idx, (name, base_model) in enumerate(base_models.items()):
     print(classification_report(y_test, y_pred, target_names=label_encoder.classes_))
     print("-" * 50)
 
-    # Confusion Matrix Visualization
+    # Confusion Matrix setuo
     cm = confusion_matrix(y_test, y_pred)
     sns.heatmap(
         cm, 
